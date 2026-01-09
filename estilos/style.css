@@ -1,12 +1,11 @@
 @charset "UTF-8";
 
 :root {
-    --cor-principal: #0a66c2;
-    --cor-card: #f3faf6;
-    --cor-fundo: #ffffff;
-    --cor-texto: #111827;
-    --cor-descricao: #6b7280;
-    --cor-destaque: #f59e0b;
+    --cor-fundo: #012e40;
+    --cor-container: #024959;
+    --cor-card: #ffffff;
+    --cor-destaques: #3ca6a6;
+    --cor-texto: #0f172a;
     --fonte-padrao: 'Inter', system-ui, '-apple-system', 'BlinkMacSystemFont', sans-serif;
 }
 
@@ -22,7 +21,7 @@ body {
 }
 
 header {
-    background-color: var(--cor-principal);
+    background-image: linear-gradient(to bottom, var(--cor-fundo), var(--cor-container));
 }
 
 header ul {
@@ -41,7 +40,7 @@ header a {
     padding: 20px;
 }
 
-header p {
+header p.mobile {
     display: none;
 }
 
@@ -109,12 +108,17 @@ article#habilidades {
     margin-top: 20px;
     padding: 20px;
     border-radius: 8px;
+    background-color: var(--cor-container);
 }
 
 article#habilidades {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
+}
+
+div.habilidades-container {
+    background-color: var(--cor-card);
 }
 
 div.logo-span {
